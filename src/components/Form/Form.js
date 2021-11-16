@@ -1,6 +1,6 @@
-import React from 'react'
+import react from 'react'
 
-class Form extends React.Component{
+class Form extends react.Component{
         state = {
             netto:0,
             tip:5,
@@ -46,7 +46,7 @@ handleChange = ( event ) => {
                 </form>
                 :
                 <div>
-                    Cena brutto: {this.state.allAmount} zł.
+                    Cena brutto: {this.stateallAmount} zł.
                 </div>}
                 
             </div>
