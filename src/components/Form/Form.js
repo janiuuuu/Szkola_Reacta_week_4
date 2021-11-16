@@ -28,26 +28,43 @@ handleChange = ( event ) => {
     this.setState({[keyName]:event.target.value});
 }
     render(){
-        const view = this.state.showResult;
-        console.log("Wiec "+view);
         return(
             <div className="App">
-                {view ?
                 <form onSubmit={this.handleSubmit}>
-                    <input type="number" name="netto" onChange={this.handleChange}/>
-                    <select name="tip" value={this.state.value} onChange={this.handleChange}>
-                        <option value = "5" >5</option>
-                        <option value = "10" >10</option>
-                        <option value = "15" >15</option>
-                        <option value = "20" >20</option>
-                    </select>
-                    <label>% netto</label>
-                    <button type="submit">Przelicz</button>
+                    <div>
+                        <label> Imię: </label>
+                        <input type="text" name="imie" onChange={this.handleChange}/>
+                    </div>
+                    <br />
+                    <div>
+                        <label> Email: </label>
+                        <input type="text" name="email" onChange={this.handleChange}/>
+                    </div>
+                    <br />
+                    <div>
+                        <label> Biografia: </label>
+                        <textarea  name="bio" onChange={this.handleChange}> Cześć, oto przykład tekstu w polu tekstowym.</textarea>
+                    </div>
+                    <br />
+                    <div onChange={this.handleChange}>
+                        <input type="radio" value="MALE" name="gender"/> Male
+                        <input type="radio" value="FEMALE" name="gender"/> Female
+                    </div>
+                    <br />
+                    <div>
+                    <label>
+                        Akceptacja regulaminu:
+                        <input
+                            name="regulamin"
+                            type="checkbox"
+                            onChange={this.handleChange} />
+                        </label>
+                    </div>
+                    <br />
+                    <div>
+                        <button type="submit">Przelicz</button>
+                    </div>
                 </form>
-                :
-                <div>
-                    Cena brutto: {this.stateallAmount} zł.
-                </div>}
                 
             </div>
         );
