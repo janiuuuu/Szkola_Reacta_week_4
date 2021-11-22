@@ -76,7 +76,7 @@ function Form (){
 
     const checkErrors = () =>{
         let count = 0;
-        
+
         for (const [key, value] of Object.entries(errors)) {
             console.log(`${key}: ${value}`);
             if(value !== 'no'){
