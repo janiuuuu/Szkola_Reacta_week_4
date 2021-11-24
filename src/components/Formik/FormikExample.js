@@ -6,7 +6,7 @@ import "../../style.css"
 const FormikExample = () =>{
     return (
         <Formik
-          initialValues={{ 
+          initialValues={{
             imie: '',
             email: '',
             bio: '',
@@ -38,7 +38,7 @@ const FormikExample = () =>{
               alert("Dziękujemy za wysłanie!!!");
               resetForm();
               setSubmitting(false);
-              
+
             }, 400);
           }}
         >
@@ -46,7 +46,7 @@ const FormikExample = () =>{
             <label htmlFor="imie">Imie:</label>
             <Field name="imie" type="text" />
             <ErrorMessage component="div" className="error" name="imie" />
-    
+
             <label htmlFor="email">Email:</label>
             <Field name="email" type="email" />
             <ErrorMessage component="div" className="error" name="email" />
@@ -56,20 +56,19 @@ const FormikExample = () =>{
             <ErrorMessage component="div" className="error" name="bio" />
 
             <div role="group" aria-labelledby="my-radio-group">
-            
-            <label htmlFor="plec">Płeć:
-              <Field type="radio" name="plec" value="female" />
-              Kobieta
-              <Field type="radio" name="plec" value="male" />
-              Mężczyzna
-            </label>
-            <ErrorMessage component="div" name="plec" className="error"/>
-            <label htmlFor="regulamin" className="checkbox">
-              <Field type="checkbox" name="regulamin"/> Akceptuje regulamin:
+              <label htmlFor="plec">Płeć:
+                <Field type="radio" name="plec" value="female" />
+                Kobieta
+                <Field type="radio" name="plec" value="male" />
+                Mężczyzna
+              </label>
+              <ErrorMessage component="div" name="plec" className="error"/>
+            </div>
+              <label htmlFor="regulamin" className="checkbox">
+                <Field type="checkbox" name="regulamin"/> Akceptuje regulamin:
               </label>
               <ErrorMessage component="div" name="regulamin" className="error"/>
-          </div>
-    
+
             <button type="submit">Submit</button>
           </Form>
         </Formik>

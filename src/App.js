@@ -7,8 +7,6 @@ function App() {
   return (
     <div >
       <FormikExample/>
-    {/* <Form/> */}
-    {/* <FormFun/> */}
     </div>
   );
 }
