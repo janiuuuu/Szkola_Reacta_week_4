@@ -1,10 +1,9 @@
 import './App.css';
-import Form from './components/Form/Form';
-import FormFun from './components/Form/FormFun';
+import Form from './components/ReactHoocForm/Form';
 
 function App() {
   return (
-    <div>
+    <div className="App">
     <Form/>
     {/* <FormFun/> */}
     </div>
